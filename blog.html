@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00ff88">
     <title>Domingos Mangange | Portfólio Profissional</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    
+
     <style>
         :root {
             --verde-neon: #00ff88;
             --bg-dark: #0a0a0a;
             --bg-card: #1a1a1a;
             --border-color: #333;
+            --text-soft: #cccccc;
         }
 
         * {
@@ -25,11 +27,19 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-dark);
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
             scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         /* Navbar custom */
@@ -57,7 +67,8 @@
             margin: 0 5px;
         }
 
-        .nav-link:hover, .nav-link.active {
+        .nav-link:hover,
+        .nav-link.active {
             color: var(--verde-neon) !important;
         }
 
@@ -67,7 +78,7 @@
         }
 
         .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 255, 136, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 255, 136, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
 
         /* Hero Section */
@@ -101,7 +112,7 @@
         }
 
         .hero-text p {
-            color: #ccc;
+            color: var(--text-soft);
             font-size: 1.1rem;
             max-width: 500px;
         }
@@ -159,7 +170,7 @@
         }
 
         .card-custom p {
-            color: #ccc;
+            color: var(--text-soft);
         }
 
         /* Info items */
@@ -209,6 +220,7 @@
         }
 
         .badge-custom {
+            display: inline-block;
             background-color: rgba(0, 255, 136, 0.2);
             color: var(--verde-neon);
             border: 1px solid var(--verde-neon);
@@ -239,11 +251,9 @@
         }
 
         /* Botões */
-        .btn-neon {
-            background-color: var(--verde-neon);
-            color: #000;
+        .btn-neon,
+        .btn-outline-neon {
             font-weight: bold;
-            border: 2px solid var(--verde-neon);
             border-radius: 50px;
             padding: 12px 35px;
             transition: 0.3s;
@@ -251,21 +261,22 @@
             display: inline-block;
         }
 
+        .btn-neon {
+            background-color: var(--verde-neon);
+            color: #000;
+            border: 2px solid var(--verde-neon);
+        }
+
         .btn-neon:hover {
             background-color: transparent;
             color: var(--verde-neon);
             box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
         }
+
         .btn-outline-neon {
             background-color: transparent;
             color: var(--verde-neon);
-            font-weight: bold;
             border: 2px solid var(--verde-neon);
-            border-radius: 50px;
-            padding: 12px 35px;
-            transition: 0.3s;
-            text-decoration: none;
-            display: inline-block;
         }
 
         .btn-outline-neon:hover {
@@ -324,7 +335,7 @@
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="https://www.facebook.com/profile.php?id=61580665605941">&lt;Domingos<span>.</span>Mangange/&gt;</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -346,9 +357,9 @@
                 <div class="col-lg-7 hero-text animate-fadeInUp">
                     <h3>👋 Olá, eu sou</h3>
                     <h1>Domingos <span>Mangange</span></h1>
-                    <h2>Milton Domingos Mt   921-91-29-70</h2>
+                    <h2>Desenvolvedor Web | +244 921 912 970</h2>
                     <p class="mb-4">
-                        Desenvolvedor Web & Estudante de Informática e Gestão no <strong>IPCN</strong>.
+                        Desenvolvedor Web &amp; Estudante de Informática e Gestão no <strong>IPCN</strong>.
                         Apaixonado por criar soluções digitais elegantes e funcionais.
                     </p>
                     <div class="d-flex flex-wrap gap-3">
@@ -358,22 +369,22 @@
                 </div>
                 <div class="col-lg-5 text-center mt-4 mt-lg-0 animate-fadeInUp animate-delay-1">
                     <div class="hero-image d-inline-block">
-                        <img src="milton tavares.png" class="img-fluid" alt="Domingos Mangange" loading="lazy">
+                        <img src="https://i.pravatar.cc/350?img=68" class="img-fluid" alt="Domingos Mangange" loading="lazy">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre https://i.pravatar.cc/350?img=68 -->
+    <!-- Sobre -->
     <section id="sobre" style="background-color: #111;">
         <div class="container">
             <h2 class="section-title">Sobre <span>Mim</span></h2>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <p class="lead text-center mb-5" style="color: #ccc;">
-                        Sou o <strong>Domingos António João Mangange</strong>,estudante do quarto ano de
-                        <strong>Informática e Gestão</strong> (Instituto  Politécnico Cladanto e Neto).
+                        Sou o <strong>Domingos António João Mangange</strong>, estudante do quarto ano de
+                        <strong>Informática e Gestão</strong> no <strong>Instituto Politécnico Cladanto e Neto</strong>.
                         Tenho uma enorme paixão pelo desenvolvimento web e tecnologia em geral.
                     </p>
                     <p class="text-center mb-5" style="color: #ccc;">
@@ -382,12 +393,11 @@
                         design de interfaces, bases de dados e muito mais.
                     </p>
 
-                    <!-- Grid Bootstrap -->
                     <div class="row g-4 mt-4">
                         <div class="col-sm-6 col-xl-3">
                             <div class="info-item">
                                 <h4>🎓 Formação</h4>
-                                <p class="mb-0" style="color: #ccc;"> Informática - Gestão(4º Ano)</p>
+                                <p class="mb-0" style="color: #ccc;">Informática - Gestão (4º Ano)</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xl-3">
@@ -523,24 +533,25 @@
                 <div class="col-lg-8 col-xl-6">
                     <form id="contactForm" novalidate>
                         <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" placeholder="Seu nome completo" required>
+                            <input type="text" class="form-control form-control-lg" name="nome" placeholder="Seu nome completo" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control form-control-lg" placeholder="Seu melhor email" required>
+                            <input type="email" class="form-control form-control-lg" name="email" placeholder="Seu melhor email" required>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" placeholder="Assunto">
+                            <input type="text" class="form-control form-control-lg" name="assunto" placeholder="Assunto">
                         </div>
                         <div class="mb-4">
-                            <textarea class="form-control form-control-lg" rows="5" placeholder="Sua mensagem..." required></textarea>
+                            <textarea class="form-control form-control-lg" name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
                         </div>
-                        <button type="submit" class="btn-neon w-100 text-center"><a href="http://wa.me/+244921912970?text=olá Milton, gostei do seu site" target="_blank">Enviar Mensagem ✉️</a></button>
+                        <button type="submit" class="btn-neon w-100 text-center">Enviar Mensagem ✉️</button>
                     </form>
-                    <div class="d-flex justify-content-center gap-4 mt-5">
-                        <a href="#" class="fs-2 text-white text-decoration-none" title="GitHub"><i class="bi bi-github"></i></a>
-                        <a href="#" class="fs-2 text-white text-decoration-none" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="fs-2 text-white text-decoration-none" title="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="fs-2 text-white text-decoration-none" title="Email"><i class="bi bi-envelope-fill"></i></a>
+
+                    <div class="d-flex justify-content-center gap-4 mt-5 flex-wrap">
+                        <a href="https://github.com/" target="_blank" rel="noreferrer" class="fs-2 text-white text-decoration-none" title="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" class="fs-2 text-white text-decoration-none" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" class="fs-2 text-white text-decoration-none" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="mailto:domingos@example.com" class="fs-2 text-white text-decoration-none" title="Email"><i class="bi bi-envelope-fill"></i></a>
                     </div>
                 </div>
             </div>
@@ -551,19 +562,15 @@
     <footer>
         <div class="container">
             <p class="mb-1">&copy; 2026 Domingos Mangange. Todos os direitos reservados.</p>
-            <p class="mb-0 small">Estudante de  Informática - Geestão</p>
+            <p class="mb-0 small">Estudante de Informática - Gestão</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS Bundle (com Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Ativar scroll spy com Bootstrap
         document.addEventListener('DOMContentLoaded', function() {
-            
-            // Smooth scroll para links internos (compatível com Bootstrap)
             document.querySelectorAll('a.nav-link, a.btn-neon, a.btn-outline-neon').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     const href = this.getAttribute('href');
@@ -571,16 +578,15 @@
                         e.preventDefault();
                         const target = document.querySelector(href);
                         if (target) {
-                            const offset = 80; // altura da navbar
+                            const offset = 80;
                             const position = target.getBoundingClientRect().top + window.pageYOffset - offset;
                             window.scrollTo({
                                 top: position,
                                 behavior: 'smooth'
                             });
-                            
-                            // Fechar menu mobile se estiver aberto
+
                             const navbarCollapse = document.getElementById('navbarNav');
-                            if (navbarCollapse.classList.contains('show')) {
+                            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
                                 const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
                                 if (bsCollapse) bsCollapse.hide();
                             }
@@ -589,7 +595,6 @@
                 });
             });
 
-            // Envio do formulário
             const form = document.getElementById('contactForm');
             if (form) {
                 form.addEventListener('submit', function(e) {
@@ -603,7 +608,6 @@
                 });
             }
 
-            // Adicionar animação aos cards quando visíveis
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
